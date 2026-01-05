@@ -2,31 +2,24 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://itsuidev.github.io/igors-timberworks-new/</loc>
+    <loc>https://timberworks.itsui.dev/</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://itsuidev.github.io/igors-timberworks-new/products.html</loc>
+    <loc>https://timberworks.itsui.dev/products.html</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://itsuidev.github.io/igors-timberworks-new/contact.html</loc>
+    <loc>https://timberworks.itsui.dev/contact.html</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://itsuidev.github.io/igors-timberworks-new/author.html</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

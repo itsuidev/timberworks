@@ -1,7 +1,6 @@
 User-agent: *
 
 Disallow: /author.html
-Disallow: /contact.html
 Disallow: /message.html
 
 Allow: /

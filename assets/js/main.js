@@ -48,17 +48,17 @@ const RunUniversalPageCode = () => {
 };
 
 const products = [
-  {name: "Sapphire Dining Table", price: 3850, category: "luxury", img: "assets/img/tables/luxury/sapphire-table.jpg", description: "Table only, handcrafted epoxy top"},
-  {name: "Prestige Console Table", price: 2000, category: "luxury", img: "assets/img/tables/luxury/prestige-console.jpg", description: "Perfect for hallway or living room"},
-  {name: "Rustic Farmhouse Table", price: 1100, category: "kitchen", img: "assets/img/tables/kitchen/rustic-farmhouse.jpg", description: "Handcrafted from reclaimed wood"},
-  {name: "Nordic Coffee Table", price: 480, category: "living-room", img: "assets/img/tables/living-room/nordic-coffee.jpg", description: "Scandinavian minimalist style"},
-  {name: "Ebony Full Table", price: 1500, category: "living-room", img: "assets/img/tables/living-room/ebony-table.jpg", description: "Ebony table only with epoxy top"},
-  {name: "Maple Epoxy Desk", price: 2100, category: "luxury", img: "assets/img/tables/kitchen/maple-table.jpg", description: "Stylish workspace with epoxy top"},
-  {name: "Cedar Dining Set", price: 650, category: "sets", img: "assets/img/tables/sets/cedar-set.jpg", description: "Cedar wood dining table with 2 chairs"},
-  {name: "Luxury Oak Dining Table", price: 3350, category: "luxury", img: "assets/img/tables/luxury/luxury-oak.jpg", description: "Seats 8, handcrafted with oak and epoxy"},
-  {name: "Venus Side Table", price: 650, category: "living-room", img: "assets/img/tables/living-room/venus-side.jpg", description: "Elegant side table for any modern interior"},
-  {name: "Oak Dining Set", price: 3800, category: "sets", img: "assets/img/tables/sets/oak-set.jpg", description: "Oak wood table with 6 leather chairs"},
-  {name: "Sublime Oak Table", price: 1800, category: "kitchen", img: "assets/img/tables/kitchen/sublime-oak.jpg", description: "Elegant kitchen dining table"}
+  {name: "Sapphire Dining Table", price: 3850, category: "luxury", img: "assets/img/tables/luxury/sapphire-table.webp", description: "Table only, handcrafted epoxy top"},
+  {name: "Prestige Console Table", price: 2000, category: "luxury", img: "assets/img/tables/luxury/prestige-console.webp", description: "Perfect for hallway or living room"},
+  {name: "Rustic Farmhouse Table", price: 1100, category: "kitchen", img: "assets/img/tables/kitchen/rustic-farmhouse.webp", description: "Handcrafted from reclaimed wood"},
+  {name: "Nordic Coffee Table", price: 480, category: "living-room", img: "assets/img/tables/living-room/nordic-coffee.webp", description: "Scandinavian minimalist style"},
+  {name: "Ebony Full Table", price: 1500, category: "living-room", img: "assets/img/tables/living-room/ebony-table.webp", description: "Ebony table only with epoxy top"},
+  {name: "Maple Epoxy Desk", price: 2100, category: "luxury", img: "assets/img/tables/kitchen/maple-table.webp", description: "Stylish workspace with epoxy top"},
+  {name: "Cedar Dining Set", price: 650, category: "sets", img: "assets/img/tables/sets/cedar-set.webp", description: "Cedar wood dining table with 2 chairs"},
+  {name: "Luxury Oak Dining Table", price: 3350, category: "luxury", img: "assets/img/tables/luxury/luxury-oak.webp", description: "Seats 8, handcrafted with oak and epoxy"},
+  {name: "Venus Side Table", price: 650, category: "living-room", img: "assets/img/tables/living-room/venus-side.webp", description: "Elegant side table for any modern interior"},
+  {name: "Oak Dining Set", price: 3800, category: "sets", img: "assets/img/tables/sets/oak-set.webp", description: "Oak wood table with 6 leather chairs"},
+  {name: "Sublime Oak Table", price: 1800, category: "kitchen", img: "assets/img/tables/kitchen/sublime-oak.webp", description: "Elegant kitchen dining table"}
 ];
 
 const RunIndexPageCode = () => {
@@ -110,11 +110,14 @@ const RunIndexPageCode = () => {
 
 const catalogueContent = document.getElementById("catalogue-content");
 
-const RenderProducts = (productsArray) => {
-  catalogueContent.innerHTML = "";
+const RenderProductsOnce = (productsArray) => {
   productsArray.forEach(p => {
     const div = document.createElement("div");
-    div.className = "col-12 col-sm-12 col-lg-4 col-md-6 mb-4";
+    div.className = "col-12 col-sm-12 col-lg-4 col-md-6 mb-4 product-card";
+    
+    div.dataset.price = p.price;
+    div.dataset.category = p.category;
+
     div.innerHTML = `
       <div class="card h-100 shadow-sm color-background-primary">
         <img src="${p.img}" class="card-img-top img-fluid h-100" alt="${p.name}">
@@ -131,31 +134,32 @@ const RenderProducts = (productsArray) => {
   });
 };
 
-const RunProductsPageCode = () => {
-  RenderProducts(products);
-  const priceFilter = document.getElementById("price-filter");
-  const categoryFilter = document.getElementById("category-filter");
-  const applyBtn = document.getElementById("apply-filters");
+const ApplyFilters = () => {
+  const priceFilter = document.getElementById("price-filter").value;
+  const categoryFilter = document.getElementById("category-filter").value;
 
-  applyBtn.addEventListener("click", () => {
-    let filtered = products;
+  document.querySelectorAll(".product-card").forEach(card => {
+    let show = true;
 
-    const price = priceFilter.value;
-    if(price !== "all"){
-      filtered = filtered.filter(p => {
-        if(price === "low") return p.price <= 1000;
-        if(price === "medium") return p.price > 1000 && p.price <= 3000;
-        if(price === "high") return p.price > 3000;
-      });
+    const price = parseFloat(card.dataset.price);
+    if(priceFilter !== "all"){
+      if(priceFilter === "low") show = price <= 1000;
+      else if(priceFilter === "medium") show = price > 1000 && price <= 3000;
+      else if(priceFilter === "high") show = price > 3000;
     }
 
-    const category = categoryFilter.value;
-    if(category !== "all"){
-      filtered = filtered.filter(p => p.category === category);
+    if(categoryFilter !== "all") {
+      show = show && (card.dataset.category === categoryFilter);
     }
 
-    RenderProducts(filtered);
+    card.style.display = show ? "" : "none";
   });
+};
+
+const RunProductsPageCode = () => {
+  RenderProductsOnce(products);
+  document.getElementById("price-filter").addEventListener("change", ApplyFilters);
+  document.getElementById("category-filter").addEventListener("change", ApplyFilters);
 
   document.querySelectorAll(".detail-item").forEach(item => {
     item.addEventListener("click", () => {
