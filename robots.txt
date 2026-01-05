@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /author.html
+Disallow: /contact.html
+Disallow: /message.html
+
+Allow: /
+
+Sitemap: https://timberworks.itsui.dev/sitemap.xml
