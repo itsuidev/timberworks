@@ -1,0 +1,35 @@
+{
+    "navigation" : [
+        {
+            "text" : "home",
+            "href" : "index.html"
+        },
+        {
+            "text" : "products",
+            "href" : "products.html"
+        },
+        {
+            "text" : "contact",
+            "href" : "contact.html"
+        },
+        {
+            "text" : "author",
+            "href" : "author.html"
+        }
+    ],
+    "contactinfo" : {
+        "phone" : "+381 66 437 427",
+        "email" : "itsuidev@gmail.com",
+        "address" : "Zdravka Čelara 16"
+    },
+    "products" : [
+        {
+            "text" : "EXCLUSIVE OFFER",
+            "href" : "products.html#exclusive-anchor"
+        },
+        {
+            "text" : "ALL PRODUCTS",
+            "href" : "products.html#all-products-anchor"
+        }
+    ]
+}

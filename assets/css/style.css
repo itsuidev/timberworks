@@ -10,7 +10,7 @@
   --transparent: transparent;
   --dimdark: rgba(15, 15, 15, 0.5);
 }
-.color-background-primary { background: var(--background); }
+.color-background-primary { background: var(--background) !important; }
 .color-background-secondary { background: var(--accent); }
 .color-background-dark { background: var(--textdark); }
 .color-background-dimdark { background-color: var(--dimdark); }
@@ -61,6 +61,19 @@
   text-decoration: none !important;
 }
 
+#price-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background: #C29C6C;
+}
+
+/* Firefox */
+#price-range::-moz-range-thumb {
+  outline: none;
+  background: #C29C6C;
+}
+
 ::selection { background-color: var(--textlight); color: var(--textdark); }
 ::-webkit-scrollbar { width: 3px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--scrollbar); border-radius: 10px; }
@@ -91,6 +104,16 @@ body { background-color: var(--textdark); scroll-behavior: smooth; }
   height: 100%;
   border-radius: 5px;
   background: var(--primary);
+}
+
+.grid-2 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.grid-3 {
+  flex: 0 0 33%;
+  max-width: 33%;
 }
 
 #hero-background { background-image: url("../img/carpentry.jpg"); background-attachment: fixed; background-size: cover; }
@@ -174,6 +197,15 @@ body { background-color: var(--textdark); scroll-behavior: smooth; }
 @media (max-width: 1200px) {
   #discount-side { display: none !important; }
   #discount-content { width: 70%; }
+  .product-card.grid-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .product-card.grid-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #product-layout { display: none; }
 }
 @media (max-width: 991px) {
   .navbar { background-color: rgba(15, 15, 15) !important; margin-top: 0 !important; }
@@ -182,6 +214,7 @@ body { background-color: var(--textdark); scroll-behavior: smooth; }
   .nav-item:nth-child(4) { display: none !important; }
   #exclusive-section { padding: 80px 0px 0px 0px !important; }
   #exclusive-details { margin-top: 10px !important; }
+
 }
 @media (max-width: 767px) {
   #hero-section { padding: 60px 0px !important; height: auto; }

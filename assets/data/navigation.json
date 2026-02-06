@@ -1,0 +1,9 @@
+[
+  { "text": "home", "href": "index.html" },
+  { "text": "products", "href": "products.html" },
+  { "text": "contact", "href": "contact.html" },
+  { "image" : { "src" : "assets/img/timberworks-logo.png", "alt" : "timberworks-logo"}, "href" : "index.html" },
+  { "text": "author", "href": "author.html" },
+  { "text": "docs", "href": "documentation.pdf", "downloadable" : 1 },
+  { "text": "download", "href": "website.zip", "downloadable" : 1 }
+]

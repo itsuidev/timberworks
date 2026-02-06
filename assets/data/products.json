@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Sapphire Dining Table",
+    "price": {
+      "oldPrice": 4000,
+      "newPrice": 3850
+    },
+    "category": "luxury",
+    "img": {
+      "src": "assets/img/tables/luxury/sapphire-table.webp",
+      "alt": "Table only, handcrafted epoxy top"
+    },
+    "stock" : 6
+  },
+  {
+    "name": "Prestige Console Table",
+    "price": {
+      "oldPrice": 2200,
+      "newPrice": 2000
+    },
+    "category": "luxury",
+    "img": {
+      "src": "assets/img/tables/luxury/prestige-console.webp",
+      "alt": "Perfect for hallway or living room"
+    },
+    "stock" : 13
+  },
+  {
+    "name": "Rustic Farmhouse Table",
+    "price": {
+      "oldPrice": 1300,
+      "newPrice": 1100
+    },
+    "category": "kitchen",
+    "img": {
+      "src": "assets/img/tables/kitchen/rustic-farmhouse.webp",
+      "alt": "Handcrafted from reclaimed wood"
+    },
+    "stock" : 12
+  },
+  {
+    "name": "Nordic Coffee Table",
+    "price": {
+      "oldPrice": 500,
+      "newPrice": 480
+    },
+    "category": "living-room",
+    "img": {
+      "src": "assets/img/tables/living-room/nordic-coffee.webp",
+      "alt": "Scandinavian minimalist style"
+    },
+    "stock" : 64
+  },
+  {
+    "name": "Ebony Full Table",
+    "price": {
+      "oldPrice": 1700,
+      "newPrice": 1500
+    },
+    "category": "living-room",
+    "img": {
+      "src": "assets/img/tables/living-room/ebony-table.webp",
+      "alt": "Ebony table only with epoxy top"
+    },
+    "stock" : 25
+  },
+  {
+    "name": "Maple Epoxy Desk",
+    "price": {
+      "oldPrice": 2300,
+      "newPrice": 2100
+    },
+    "category": "luxury",
+    "img": {
+      "src": "assets/img/tables/kitchen/maple-table.webp",
+      "alt": "Stylish workspace with epoxy top"
+    },
+    "stock" : 36
+  },
+  {
+    "name": "Cedar Dining Set",
+    "price": {
+      "oldPrice": 800,
+      "newPrice": 650
+    },
+    "category": "sets",
+    "img": {
+      "src": "assets/img/tables/sets/cedar-set.webp",
+      "alt": "Cedar wood dining table with 2 chairs"
+    },
+    "stock" : 30
+  },
+  {
+    "name": "Luxury Oak Dining Table",
+    "price": {
+      "oldPrice": 3400,
+      "newPrice": 3350
+    },
+    "category": "luxury",
+    "img": {
+      "src": "assets/img/tables/luxury/luxury-oak.webp",
+      "alt": "Seats 8, handcrafted with oak and epoxy"
+    },
+    "stock" : 60
+  },
+  {
+    "name": "Venus Side Table",
+    "price": {
+      "oldPrice": 900,
+      "newPrice": 650
+    },
+    "category": "living-room",
+    "img": {
+      "src": "assets/img/tables/living-room/venus-side.webp",
+      "alt": "Elegant side table for any modern interior"
+    },
+    "stock" : 63
+  },
+  {
+    "name": "Oak Dining Set",
+    "price": {
+      "oldPrice": 4000,
+      "newPrice": 3800
+    },
+    "category": "sets",
+    "img": {
+      "src": "assets/img/tables/sets/oak-set.webp",
+      "alt": "Oak wood table with 6 leather chairs"
+    },
+    "stock" : 23
+  },
+  {
+    "name": "Sublime Oak Table",
+    "price": {
+      "oldPrice": 2000,
+      "newPrice": 1800
+    },
+    "category": "kitchen",
+    "img": {
+      "src": "assets/img/tables/kitchen/sublime-oak.webp",
+      "alt": "Elegant kitchen dining table"
+    },
+    "stock" : 53
+  }
+]
