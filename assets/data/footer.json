@@ -31,5 +31,22 @@
             "text" : "ALL PRODUCTS",
             "href" : "products.html#all-products-anchor"
         }
+    ],
+    "socials" : [
+        {
+            "type" : "github",
+            "url" : "https://github.com/itsuidev",
+            "icon" : "bi bi-github"
+        },
+         {
+            "type" : "youtube",
+            "url" : "https://www.youtube.com/channel/UC0Zmf-VfOpLLB4XJoYszJqQ",
+            "icon" : "bi bi-youtube"
+        },
+         {
+            "type" : "instagram",
+            "url" : "https://www.instagram.com",
+            "icon" : "bi bi-instagram"
+        }
     ]
 }

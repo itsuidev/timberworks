@@ -1,11 +1,12 @@
 [
   {
+    "id" : 1,
     "name": "Sapphire Dining Table",
     "price": {
-      "oldPrice": 4000,
-      "newPrice": 3850
+      "regular": 4000,
+      "discount": 20
     },
-    "category": "luxury",
+    "categoryId": 1,
     "img": {
       "src": "assets/img/tables/luxury/sapphire-table.webp",
       "alt": "Table only, handcrafted epoxy top"
@@ -13,25 +14,27 @@
     "stock" : 6
   },
   {
+    "id" : 2,
     "name": "Prestige Console Table",
     "price": {
-      "oldPrice": 2200,
-      "newPrice": 2000
+      "regular": 2200,
+      "discount": 14
     },
-    "category": "luxury",
+    "categoryId": 1,
     "img": {
       "src": "assets/img/tables/luxury/prestige-console.webp",
       "alt": "Perfect for hallway or living room"
     },
-    "stock" : 13
+    "stock" : 0
   },
   {
+    "id" : 3,
     "name": "Rustic Farmhouse Table",
     "price": {
-      "oldPrice": 1300,
-      "newPrice": 1100
+      "regular": 1300,
+      "discount": 13
     },
-    "category": "kitchen",
+    "categoryId": 2,
     "img": {
       "src": "assets/img/tables/kitchen/rustic-farmhouse.webp",
       "alt": "Handcrafted from reclaimed wood"
@@ -39,12 +42,13 @@
     "stock" : 12
   },
   {
+    "id" : 4,
     "name": "Nordic Coffee Table",
     "price": {
-      "oldPrice": 500,
-      "newPrice": 480
+      "regular": 500,
+      "discount": 0
     },
-    "category": "living-room",
+    "categoryId": 3,
     "img": {
       "src": "assets/img/tables/living-room/nordic-coffee.webp",
       "alt": "Scandinavian minimalist style"
@@ -52,12 +56,13 @@
     "stock" : 64
   },
   {
+    "id" : 5,
     "name": "Ebony Full Table",
     "price": {
-      "oldPrice": 1700,
-      "newPrice": 1500
+      "regular": 1700,
+      "discount": 20
     },
-    "category": "living-room",
+    "categoryId": 3,
     "img": {
       "src": "assets/img/tables/living-room/ebony-table.webp",
       "alt": "Ebony table only with epoxy top"
@@ -65,12 +70,13 @@
     "stock" : 25
   },
   {
+    "id" : 6,
     "name": "Maple Epoxy Desk",
     "price": {
-      "oldPrice": 2300,
-      "newPrice": 2100
+      "regular": 2300,
+      "discount": 20
     },
-    "category": "luxury",
+    "categoryId": 1,
     "img": {
       "src": "assets/img/tables/kitchen/maple-table.webp",
       "alt": "Stylish workspace with epoxy top"
@@ -78,25 +84,27 @@
     "stock" : 36
   },
   {
+    "id" : 7,
     "name": "Cedar Dining Set",
     "price": {
-      "oldPrice": 800,
-      "newPrice": 650
+      "regular": 800,
+      "discount": 20
     },
-    "category": "sets",
+    "categoryId": 4,
     "img": {
       "src": "assets/img/tables/sets/cedar-set.webp",
       "alt": "Cedar wood dining table with 2 chairs"
     },
-    "stock" : 30
+    "stock" : 0
   },
   {
+    "id" : 8,
     "name": "Luxury Oak Dining Table",
     "price": {
-      "oldPrice": 3400,
-      "newPrice": 3350
+      "regular": 3400,
+      "discount": 10
     },
-    "category": "luxury",
+    "categoryId": 1,
     "img": {
       "src": "assets/img/tables/luxury/luxury-oak.webp",
       "alt": "Seats 8, handcrafted with oak and epoxy"
@@ -104,12 +112,13 @@
     "stock" : 60
   },
   {
+    "id" : 9,
     "name": "Venus Side Table",
     "price": {
-      "oldPrice": 900,
-      "newPrice": 650
+      "regular": 900,
+      "discount": 25
     },
-    "category": "living-room",
+    "categoryId": 3,
     "img": {
       "src": "assets/img/tables/living-room/venus-side.webp",
       "alt": "Elegant side table for any modern interior"
@@ -117,12 +126,13 @@
     "stock" : 63
   },
   {
+    "id" : 10,
     "name": "Oak Dining Set",
     "price": {
-      "oldPrice": 4000,
-      "newPrice": 3800
+      "regular": 4000,
+      "discount": 20
     },
-    "category": "sets",
+    "categoryId": 4,
     "img": {
       "src": "assets/img/tables/sets/oak-set.webp",
       "alt": "Oak wood table with 6 leather chairs"
@@ -130,12 +140,13 @@
     "stock" : 23
   },
   {
+    "id" : 11,
     "name": "Sublime Oak Table",
     "price": {
-      "oldPrice": 2000,
-      "newPrice": 1800
+      "regular": 2000,
+      "discount": 20
     },
-    "category": "kitchen",
+    "categoryId": 2,
     "img": {
       "src": "assets/img/tables/kitchen/sublime-oak.webp",
       "alt": "Elegant kitchen dining table"
