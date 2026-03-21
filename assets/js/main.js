@@ -240,7 +240,7 @@ const runUniversalPageCode = (navigationData, footerData) => {
             let isActive = "";
             const path = window.location.pathname;
 
-            if (path.endsWith(item.href)) isActive = "active";
+            if (path.endsWith(item.href) || path.endsWith("/") && item.href === "index.html") isActive = "active";
 
             if (item.image) {
                 listItemsHTML += `
