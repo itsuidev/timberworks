@@ -393,6 +393,25 @@ const runIndexPageCode = () => {
 
 // CODE FOR PRODUCTS.HTML
 const runProductsPageCode = (loadedFilters) => {
+    document.querySelectorAll(".detail-item").forEach(item => {
+        item.addEventListener("click", () => {
+        const wrapper = item.parentElement;
+        const content = wrapper.querySelector(".detail-content");
+
+        if (content.classList.contains("open")) {
+            return;
+        }
+
+        document.querySelectorAll(".detail-content").forEach(panel => {
+            panel.classList.remove("open");
+            panel.parentElement.querySelector(".detail-item").classList.remove("open-panel");
+        });
+
+        content.classList.add("open");
+        item.classList.add("open-panel");
+        });
+    });
+    
     let filteredProducts = [];
     // MINI CART
     const updateMiniCart = () => {
@@ -603,6 +622,7 @@ const runProductsPageCode = (loadedFilters) => {
     }
 
     applyFilters();
+
 };
 
 // CODE FOR CONTACT.HTML
