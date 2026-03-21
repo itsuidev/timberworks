@@ -240,7 +240,7 @@ const runUniversalPageCode = (navigationData, footerData) => {
             let isActive = "";
             const path = window.location.pathname;
 
-            if (path.endsWith(item.href) || path.endsWith("/") && item.href === "index.html") isActive = "active";
+            if (path.endsWith(item.href)) isActive = "active";
 
             if (item.image) {
                 listItemsHTML += `
@@ -393,6 +393,8 @@ const runIndexPageCode = () => {
 
 // CODE FOR PRODUCTS.HTML
 const runProductsPageCode = (loadedFilters) => {
+    let filteredProducts = [...allProducts];
+
     document.querySelectorAll(".detail-item").forEach(item => {
         item.addEventListener("click", () => {
         const wrapper = item.parentElement;
@@ -412,7 +414,6 @@ const runProductsPageCode = (loadedFilters) => {
         });
     });
     
-    let filteredProducts = [];
     // MINI CART
     const updateMiniCart = () => {
         const cart = Cart.items;
@@ -461,7 +462,7 @@ const runProductsPageCode = (loadedFilters) => {
     let currentLayout = "grid-3";
     let visibleCount = 6;
     const step = 3;
-
+    
     Render.categoryDropdown("#productCategoryFilter", allCategories);
 
     const renderProducts = (productData) => {
@@ -499,18 +500,18 @@ const runProductsPageCode = (loadedFilters) => {
             catalogue.append(`<p class="products-empty w-100 text-center py-5">No products meeting the selected criteria.</p>`);
         }
 
-        $(".product-card").addClass("d-none");
+        $(".product-card").addClass("d-none").removeClass("grid-1 grid-2 grid-3").addClass(currentLayout);
+
         const productsToShow = filteredProductData.slice(0, visibleCount);
 
-        for(let product of productsToShow) {
+        for (let product of productsToShow) {
             const productElement = $(`.product-card[data-id="${product.id}"]`);
-            productElement.removeClass("d-none");
-            const btn = productElement.find(".add-to-cart-btn");
+            productElement.removeClass("d-none"); 
 
-            if(Cart.exists(product.id)) {
+            const btn = productElement.find(".add-to-cart-btn");
+            if (Cart.exists(product.id)) {
                 btn.text("In cart").addClass("disabled btn-secondary").removeClass("btn-dark");
-            }
-            else {
+            } else {
                 btn.text("Add to cart").addClass("btn-dark").removeClass("disabled btn-secondary");
             }
         }
@@ -605,6 +606,12 @@ const runProductsPageCode = (loadedFilters) => {
         updateMiniCart();
         showUserDialog("Item removed from cart.", "info");
         if(typeof refreshProducts === "function") applyFilters(); 
+    });
+
+    $(document).on("click", ".layout-btn", function() {
+        const selectedLayout = $(this).data("layout");
+        currentLayout = selectedLayout;
+        refreshProducts(filteredProducts);
     });
 
     renderProducts(allProducts);
